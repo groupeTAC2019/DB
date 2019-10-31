@@ -1,3 +1,5 @@
+--Thomas
+
 CREATE TABLE Assurance(
    id_assurance INT IDENTITY(1,1),
    type VARCHAR(50) NOT NULL UNIQUE,
