@@ -1,5 +1,6 @@
 --Thomas
 --Corentin
+--Alex
 
 CREATE TABLE Assurance(
    id_assurance INT IDENTITY(1,1),
