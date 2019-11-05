@@ -50,10 +50,12 @@ VALUES ('2019-04-11','2019-04-21',0,1,2),
 ('2018-07-29','2019-01-05',0,2,1),
 ('2019-12-03','2020-01-15',1,3,4)
 
-INSERT INTO Commentaire (message,note,valide) 
-VALUES ('super sauf les voisins',3,1),
-	   ('le propietaire est un gros radin',0,0),
-	   ('exelent , je retournerai l an prochain',5,1)
+INSERT INTO Commentaire (message,note,valide,id_membre,id_bien) 
+VALUES ('super sauf les voisins',3,1,1,1),
+	   ('le propietaire est un gros radin',0,0,2,2),
+	   ('exelent , je retournerai l an prochain',5,1,2,3)
+
+INSERT INTO verifier (id_membre ,id_commentaire) VALUES (2,3),(2,4),(2,5)
 
 INSERT INTO contien (id_bien,id_piece,nombre)
 VALUES (1,2,3),(2,1,1),(3,3,2)
