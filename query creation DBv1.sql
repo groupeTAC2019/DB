@@ -37,6 +37,7 @@ CREATE TABLE Membre(
    tel INT NOT NULL,
    admin BIT NOT NULL,
    id_pays INT NOT NULL,
+   mdp VARCHAR NOT NULL,
    PRIMARY KEY(id_membre),
    FOREIGN KEY(id_pays) REFERENCES Pays(id_pays)
 );
