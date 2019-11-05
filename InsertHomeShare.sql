@@ -43,3 +43,8 @@ VALUES ('maison de campagne','iam impotentia fines mediocrium delictorum nefanda
 ('chalet de montagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
   5,1,null,3,(SELECT id_membre FROM Membre WHERE nom ='Surin'))
+
+INSERT INTO Echange (date_debut,date_fin,valide,id_bien,id_membre)
+VALUES ('2019-04-11','2019-04-21',0,1,2),
+('2018-07-29','2019-01-05',0,2,1),
+('2019-12-03','2020-01-15',1,3,4)
