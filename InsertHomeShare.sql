@@ -17,3 +17,12 @@ VALUES ('salle d''eau'),
 ('cuisine'),
 ('cave'),
 ('grenier')
+Insert INTO Adresse (ville,cp,rue,num,boite,id_pays)
+VALUES ('namur',2232,' rue de lEglise',312,null,1),
+		('bruxelles',1432,' Ch de Waterloo',32,'3a',1),
+		('charleroi',2250,' rue de Pierre',89,'2',1),
+		('paris',9576,' Place de revolution',12,'4',2)
+
+Insert INTO Options(nom)
+Values ('intenet'),('TV'),('piscine'),('booling'),('terasse'),('garage'),('placeParking'),('billard'),
+		('terrin de tennis'),('niche de chien')
