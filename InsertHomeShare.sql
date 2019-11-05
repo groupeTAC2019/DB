@@ -27,3 +27,6 @@ VALUES ('namur',2232,' rue de lEglise',312,null,1),
 Insert INTO Options(nom)
 Values ('intenet'),('TV'),('piscine'),('booling'),('terasse'),('garage'),('placeParking'),('billard'),
 		('terrin de tennis'),('niche de chien')
+
+Insert INTO Assurance(type, prix)
+Values ('degradation',15),('inondation',5),('insondie',10),('dessee',5),('assistanceAuto',10),('vole',5),('perte',10)
