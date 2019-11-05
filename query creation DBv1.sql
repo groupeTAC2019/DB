@@ -141,3 +141,12 @@ CREATE TABLE composer(
    FOREIGN KEY(id_assurance) REFERENCES Assurance(id_assurance),
    FOREIGN KEY(id_assurance_1) REFERENCES Assurance(id_assurance)
 );
+
+CREATE TABLE Photo(
+   id_image INT IDENTITY(1,1),
+   lien VARCHAR(50) NOT NULL,
+   legende VARCHAR(50),
+   id_bien INT NOT NULL,
+   PRIMARY KEY(id_image),
+   FOREIGN KEY(id_bien) REFERENCES Bien(id_bien)
+);
