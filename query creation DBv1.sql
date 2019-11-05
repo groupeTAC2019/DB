@@ -35,7 +35,7 @@ CREATE TABLE Membre(
    prenom VARCHAR(50) NOT NULL,
    email VARCHAR(50) NOT NULL UNIQUE,
    tel INT NOT NULL,
-   admin BIT NOT NULL,
+   is_admin BIT NOT NULL,
    id_pays INT NOT NULL,
    mdp VARCHAR NOT NULL,
    PRIMARY KEY(id_membre),
@@ -141,4 +141,3 @@ CREATE TABLE composer(
    FOREIGN KEY(id_assurance) REFERENCES Assurance(id_assurance),
    FOREIGN KEY(id_assurance_1) REFERENCES Assurance(id_assurance)
 );
-
