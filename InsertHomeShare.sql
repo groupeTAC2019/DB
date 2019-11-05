@@ -48,3 +48,9 @@ INSERT INTO Echange (date_debut,date_fin,valide,id_bien,id_membre)
 VALUES ('2019-04-11','2019-04-21',0,1,2),
 ('2018-07-29','2019-01-05',0,2,1),
 ('2019-12-03','2020-01-15',1,3,4)
+go
+
+INSERT INTO Commentaire (message,note,valide) 
+VALUES ('super sauf les voisins',3,1),
+	   ('le propietaire est un gros radin',0,0),
+	   ('exelent , je retournerai l an prochain',5,1)
