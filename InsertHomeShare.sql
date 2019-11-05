@@ -30,3 +30,16 @@ Values ('intenet'),('TV'),('piscine'),('booling'),('terasse'),('garage'),('place
 
 Insert INTO Assurance(type, prix)
 Values ('degradation',15),('inondation',5),('insondie',10),('dessee',5),('assistanceAuto',10),('vole',5),('perte',10)
+
+INSERT INTO Bien(titre,desc_courte,
+				desc_longue,
+				nb_personne,disponible,date_desactivation,id_adresse,id_membre)
+VALUES ('maison de campagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+  3,1,null,1,(SELECT id_membre FROM Membre WHERE nom ='Jean')),
+('appartement centre ville','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+  2,0,null,2,(SELECT id_membre FROM Membre WHERE nom ='Goovaerts')),
+('chalet de montagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+  5,1,null,3,(SELECT id_membre FROM Membre WHERE nom ='Surin'))
