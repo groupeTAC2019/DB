@@ -31,7 +31,7 @@ CREATE TABLE Pays(
 
 CREATE TABLE Membre(
    id_membre INT IDENTITY(1,1),
-   nom INT NOT NULL,
+   nom VARCHAR(50) NOT NULL,
    prenom VARCHAR(50) NOT NULL,
    email VARCHAR(50) NOT NULL UNIQUE,
    tel INT NOT NULL,
