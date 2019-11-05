@@ -17,6 +17,7 @@ VALUES ('salle d''eau'),
 ('cuisine'),
 ('cave'),
 ('grenier')
+
 Insert INTO Adresse (ville,cp,rue,num,boite,id_pays)
 VALUES ('namur',2232,' rue de lEglise',312,null,1),
 		('bruxelles',1432,' Ch de Waterloo',32,'3a',1),
