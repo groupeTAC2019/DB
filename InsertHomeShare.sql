@@ -29,7 +29,7 @@ Values ('intenet'),('TV'),('piscine'),('booling'),('terasse'),('garage'),('place
 		('terrin de tennis'),('niche de chien')
 
 Insert INTO Assurance(type, prix)
-Values ('degradation',15),('inondation',5),('insondie',10),('dessee',5),('assistanceAuto',10),('vole',5),('perte',10)
+Values ('degradation',15),('inondation',5),('inscendie',10),('dece',5),('assistanceAuto',10),('vole',5),('perte',10),('basique',null),('premium',null)
 
 INSERT INTO Bien(titre,desc_courte,
 				desc_longue,
@@ -55,7 +55,13 @@ VALUES ('super sauf les voisins',3,1),
 	   ('exelent , je retournerai l an prochain',5,1)
 
 INSERT INTO contien (id_bien,id_piece,nombre)
-VALUES (1,2,3),(2,1,1)
+VALUES (1,2,3),(2,1,1),(3,3,2)
 
 INSERT INTO comprend(id_echange,id_assurance)
 VALUES (1,2),(2,1),(1,5),(2,4)
+
+INSERT INTO comporte (id_bien,id_option)
+VALUES	(1,2),(2,1),(3,3)
+
+INSERT INTO composer
+VALUES	(8,2),(8,3),(9,8),(9,6),(9,7)
