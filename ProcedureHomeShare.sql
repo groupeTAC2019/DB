@@ -1,3 +1,6 @@
+USE HomeShareDB
+GO
+
 CREATE PROCEDURE Creation_Bien @titre VARCHAR(50), 
 				@desc_courte VARCHAR(255),
 				@desc_longue VARCHAR(255),
@@ -25,10 +28,8 @@ VALUES (@titre,
 		@id_membre)
 GO
 
-CREATE PROCEDURE Select_Bien_Pays @pays_name VARCHAR(50)
+CREATE PROCEDURE Bien_Membre @id_membre INT
 AS
-SELECT * FROM Bien AS B LEFT JOIN Adresse AS A ON B.id_adresse=A.id_adresse
-						LEFT JOIN Pays AS P ON A.id_pays=P.id_pays
-						WHERE P.nom = 'France'
+SELECT * FROM Bien WHERE id_membre = @id_membre
+GO
 
-						--TODO Finish this!
