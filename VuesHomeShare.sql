@@ -1,3 +1,6 @@
+USE HomeShareDB
+GO
+
 CREATE VIEW V_Bien_Pays
 AS
 SELECT B.titre AS "titre bien",
@@ -13,3 +16,4 @@ SELECT B.titre AS "titre bien",
 		Pa.nom AS "Pays"
 		FROM Bien AS B LEFT JOIN Adresse AS A ON B.id_adresse = A.id_adresse
 					LEFT JOIN Pays AS Pa ON A.id_pays = Pa.id_pays
+GO
