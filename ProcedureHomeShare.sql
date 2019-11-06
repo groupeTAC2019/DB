@@ -57,3 +57,16 @@ SELECT B.id_bien AS "id bien",
 					LEFT JOIN Membre AS M ON B.id_membre = M.id_membre
 					LEFT JOIN Photo AS Ph ON B.id_bien = Ph.id_bien
 		WHERE B.id_bien = @id_bien
+GO
+
+CREATE PROCEDURE Bien_A_Date @date_debut DATE , @date_fin DATE
+AS
+SELECT * 
+	FROM Bien AS B
+		WHERE B.id_bien = (SELECT E.id_bien 
+								FROM Echange AS E 
+									WHERE B.id_bien = E.id_bien 
+										AND E.valide = 1 
+										AND (E.date_debut >  @date_debut
+										OR E.date_fin < @date_fin)) 
+GO
