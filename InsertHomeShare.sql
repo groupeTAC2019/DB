@@ -72,3 +72,6 @@ VALUES	(8,2),(8,3),(9,8),(9,6),(9,7)
 INSERT INTO imposer(id_assurance,id_bien)
 VALUES	(8,1),(9,2)
 
+UPDATE Bien
+set id_adresse = 4
+where id_bien = 3
