@@ -58,7 +58,7 @@ VALUES ('super sauf les voisins',3,1,1,1),
 INSERT INTO verifier (id_membre ,id_commentaire) VALUES (2,1),(2,2),(2,3)
 
 INSERT INTO contien (id_bien,id_piece,nombre)
-VALUES (1,2,3),(2,1,1),(3,3,2)
+VALUES (1,2,3),(2,1,1),(3,3,2),(1,1,1)
 
 INSERT INTO comprend(id_echange,id_assurance)
 VALUES (1,2),(2,1),(1,5),(2,4)
