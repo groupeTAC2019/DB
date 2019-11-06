@@ -150,3 +150,15 @@ CREATE TABLE Photo(
    PRIMARY KEY(id_image),
    FOREIGN KEY(id_bien) REFERENCES Bien(id_bien)
 );
+
+ALTER TABLE Bien
+ADD date_ajout DATE
+GO
+
+UPDATE Bien
+SET date_ajout = '2019-11-06'
+GO
+
+ALTER TABLE Bien 
+ALTER COLUMN date_ajout DATE NOT NULL
+GO
