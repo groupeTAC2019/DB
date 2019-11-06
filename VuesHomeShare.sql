@@ -18,6 +18,16 @@ SELECT B.titre AS "titre bien",
 					LEFT JOIN Pays AS Pa ON A.id_pays = Pa.id_pays
 GO
 
+CREATE VIEW V_Dernier_5_Bien
+AS
+SELECT TOP 5 B.titre AS "titre bien",
+		B.desc_courte AS "Description courte",
+		B.desc_longue AS "Description longue",
+		B.disponible AS "Disponible",
+		B.nb_personne AS "Nombre de personne"
+		FROM Bien AS B
+			ORDER BY B.date_ajout
+GO
 CREATE VIEW V_Bien_Bonne_Note
 AS
 SELECT B.titre AS "titre bien",
