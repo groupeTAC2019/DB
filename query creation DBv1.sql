@@ -38,6 +38,7 @@ CREATE TABLE Membre(
    is_admin BIT NOT NULL,
    id_pays INT NOT NULL,
    mdp VARCHAR(50) NOT NULL,
+   is_delete BIT NOT NULL default 0,
    PRIMARY KEY(id_membre),
    FOREIGN KEY(id_pays) REFERENCES Pays(id_pays)
 );
@@ -62,6 +63,8 @@ CREATE TABLE Bien(
    nb_personne INT NOT NULL,
    disponible BIT NOT NULL,
    date_desactivation DATE,
+   date_ajout DATE NOT NULL,
+   is_delete BIT NOT NULL default 0,
    id_adresse INT NOT NULL,
    id_membre INT NOT NULL,
    PRIMARY KEY(id_bien),
@@ -84,7 +87,7 @@ CREATE TABLE Commentaire(
 CREATE TABLE Echange(
    id_echange INT IDENTITY(1,1),
    date_debut DATE NOT NULL,
-   date_fin VARCHAR(50) NOT NULL,
+   date_fin DATE NOT NULL,
    valide BIT NOT NULL,
    id_bien INT NOT NULL,
    id_membre INT NOT NULL,
@@ -150,19 +153,3 @@ CREATE TABLE Photo(
    PRIMARY KEY(id_image),
    FOREIGN KEY(id_bien) REFERENCES Bien(id_bien)
 );
-
-ALTER TABLE Bien
-ADD date_ajout DATE
-GO
-
-UPDATE Bien
-SET date_ajout = '2019-11-06'
-GO
-
-ALTER TABLE Bien 
-ALTER COLUMN date_ajout DATE NOT NULL
-GO
-
-ALTER TABLE Echange 
-ALTER COLUMN date_fin DATE NOT NULL
-GO
