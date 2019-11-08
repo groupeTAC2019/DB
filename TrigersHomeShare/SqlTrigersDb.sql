@@ -4,9 +4,10 @@ INSTEAD OF DELETE
 AS
 begin
 	UPDATE Bien 
-	set isDelete = 1
+	set is_delete = 1
 	where id_bien in (select id_bien from deleted)
 end
+GO
 
 --update Bien 
 --set isDelete = 0
@@ -22,10 +23,10 @@ INSTEAD OF DELETE
 AS
 begin
 	UPDATE Membre 
-	set isDelete = 1
+	set is_delete = 1
 	where id_membre in (select id_membre from deleted)
 end
-
+GO
 
 --update Membre 
 --set isDelete = 0
