@@ -34,16 +34,16 @@ Values ('degradation',15),('inondation',5),('inscendie',10),('dece',5),('assista
 
 INSERT INTO Bien(titre,desc_courte,
 				desc_longue,
-				nb_personne,disponible,date_desactivation,id_adresse,id_membre)
+				nb_personne,disponible,date_desactivation,date_ajout,id_adresse,id_membre)
 VALUES ('maison de campagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
-  3,1,null,1,(SELECT id_membre FROM Membre WHERE nom ='Jean')),
+  3,1,null,'2012-06-15',1,(SELECT id_membre FROM Membre WHERE nom ='Jean')),
 ('appartement centre ville','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
-  2,0,null,2,(SELECT id_membre FROM Membre WHERE nom ='Goovaerts')),
+  2,0,null,'2015-07-22',2,(SELECT id_membre FROM Membre WHERE nom ='Goovaerts')),
 ('chalet de montagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
-  5,1,null,3,(SELECT id_membre FROM Membre WHERE nom ='Surin'))
+  5,1,null,'2017-11-05',4,(SELECT id_membre FROM Membre WHERE nom ='Surin'))
 
 INSERT INTO Echange (date_debut,date_fin,valide,id_bien,id_membre)
 VALUES ('2019-04-11','2019-04-21',0,1,2),
@@ -71,7 +71,3 @@ VALUES	(8,2),(8,3),(9,8),(9,6),(9,7)
 
 INSERT INTO imposer(id_assurance,id_bien)
 VALUES	(8,1),(9,2)
-
-UPDATE Bien
-set id_adresse = 4
-where id_bien = 3
