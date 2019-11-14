@@ -3,10 +3,20 @@ GO
 
 CREATE VIEW V_Bien_Pays
 AS
-SELECT B.*
+SELECT  B.*
 		FROM Bien AS B LEFT JOIN Adresse AS A ON B.id_adresse = A.id_adresse
-					LEFT JOIN Pays AS Pa ON A.id_pays = Pa.id_pays
-					ORDER BY Pa.nom
+					GROUP BY A.id_pays, 
+							B.id_bien,
+							B.id_membre,
+							B.id_adresse,
+							B.disponible,
+							B.titre,
+							B.nb_personne,
+							B.date_ajout,
+							B.desc_courte,
+							B.desc_longue,
+							B.date_desactivation,
+							B.is_delete
 GO
 
 CREATE VIEW V_Dernier_5_Bien
