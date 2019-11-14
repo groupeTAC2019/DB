@@ -1,10 +1,10 @@
 USE HomeShareDB
 GO
-
-CREATE VIEW V_Bien_Pays
+--TODO ameliorer l'order/group by de la view
+SELECT VIEW V_Bien_Pays
 AS
-SELECT  B.*
-		FROM Bien AS B LEFT JOIN Adresse AS A ON B.id_adresse = A.id_adresse
+SELECT  id_pays,B.*
+		FROM Adresse AS A LEFT JOIN Bien AS B ON B.id_adresse = A.id_adresse
 					GROUP BY A.id_pays, 
 							B.id_bien,
 							B.id_membre,
@@ -18,7 +18,6 @@ SELECT  B.*
 							B.date_desactivation,
 							B.is_delete
 GO
-
 CREATE VIEW V_Dernier_5_Bien
 AS
 SELECT TOP 5 B.*
