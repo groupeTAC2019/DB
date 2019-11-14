@@ -37,18 +37,23 @@ INSERT INTO Bien(titre,desc_courte,
 				nb_personne,disponible,date_desactivation,date_ajout,id_adresse,id_membre)
 VALUES ('maison de campagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
-  3,1,null,'2012-06-15',1,(SELECT id_membre FROM Membre WHERE nom ='Jean')),
+  3,1,null,'2012-06-15',1,1),
 ('appartement centre ville','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
-  2,0,null,'2015-07-22',2,(SELECT id_membre FROM Membre WHERE nom ='Goovaerts')),
+  2,0,null,'2015-07-22',2,2),
 ('chalet de montagne','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
 'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
-  5,1,null,'2017-11-05',4,(SELECT id_membre FROM Membre WHERE nom ='Surin'))
+  5,1,null,'2017-11-05',4,3),
+('chateau','iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+'Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina',
+  10,1,null,'2018-11-05',3,4)
 
 INSERT INTO Echange (date_debut,date_fin,valide,id_bien,id_membre)
-VALUES ('2019-04-11','2019-04-21',0,1,2),
-('2018-07-29','2019-01-05',0,2,1),
-('2019-12-03','2020-01-15',1,3,4)
+VALUES ('2020-01-20','2020-01-22',1,1,4),
+('2020-01-26','2020-01-30',1,2,4),
+('2020-01-20','2020-01-24',1,3,4),
+('2020-01-24','2020-01-26',1,4,1),
+('2022-02-24','2022-09-30',1,4,1)
 
 INSERT INTO Commentaire (message,note,valide,id_membre,id_bien) 
 VALUES ('super sauf les voisins',3,1,1,1),
