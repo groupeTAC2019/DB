@@ -63,10 +63,17 @@ CREATE PROCEDURE Bien_A_Date @date_debut DATE , @date_fin DATE
 AS
 SELECT * 
 	FROM Bien AS B
-		WHERE B.id_bien = (SELECT E.id_bien 
+		WHERE B.id_bien NOT IN (SELECT E.id_bien 
 								FROM Echange AS E 
-									WHERE B.id_bien = E.id_bien 
-										AND E.valide = 1 
-										AND (E.date_debut >  @date_debut
-										OR E.date_fin < @date_fin)) 
+									WHERE E.valide = 1
+										AND (
+											(E.date_debut >  @date_debut AND E.date_fin < @date_fin)
+											OR
+											(@date_debut >= E.date_debut AND @date_debut <= E.date_fin)
+											OR
+											(@date_fin >= E.date_debut AND @date_fin <= E.date_fin)
+											)										
+											)
 GO
+
+--test date 23-1-2020 au 25-01-2020 2 1ers resultats
